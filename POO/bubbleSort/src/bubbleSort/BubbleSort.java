@@ -1,0 +1,29 @@
+package bubbleSort;
+
+public class BubbleSort {
+
+	public static void main(String[] args) {
+		
+		int[] vetor = {64, 34, 25, 12, 22, 11, 90};
+		int aux;
+		for(int i = 0 ; i < vetor.length; i++) {
+			for(int h = i +1; h < vetor.length; h++) {
+				
+				if(vetor[i] > vetor[h]) {
+					aux = vetor[h];
+					vetor[h] = vetor[i];
+					vetor[i] = aux;
+					
+				}
+			}
+		}
+		
+		 for (int i = 0; i < vetor.length; i++) {
+	            System.out.print(vetor[i] + " ");
+	        }
+	    
+	
+
+	}
+
+}

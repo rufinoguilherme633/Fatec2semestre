@@ -1,0 +1,28 @@
+package media;
+
+import java.util.Scanner;
+
+public class Media {
+
+	public static void main(String[] args) {
+		int[] notas = new int;
+		Scanner sc = new Scanner(System.in);
+		
+	
+		System.out.println("Digite nota 1");
+		n1 = sc.nextInt();
+		
+		System.out.println("Digite nota 2");
+		n2 = sc.nextInt();
+		
+		System.out.println("Digite nota 3");
+		n3 = sc.nextInt();
+		
+		System.out.println("Digite nota 4");
+		n4 = sc.nextInt();
+			
+		
+		
+	}
+
+}

@@ -1,0 +1,32 @@
+package media;
+
+import java.util.Scanner;
+
+public class Media {
+
+	public static void main(String[] args) {
+		float[] notas = new float[4];
+		Scanner sc = new Scanner(System.in);
+		int i = 0;
+		float soma = 0;
+		
+		while(i < notas.length) {
+			System.out.println("Digite nota 1");
+			notas[i] = sc.nextInt();
+			soma += notas[i];
+			i++;
+		}
+		
+		soma /=notas.length;
+		System.out.println("nota total" + soma);
+		while(i < notas.length) {
+			System.out.println("notas"+ notas[i]);
+			i++;
+		}
+
+			
+		
+		
+	}
+
+}
