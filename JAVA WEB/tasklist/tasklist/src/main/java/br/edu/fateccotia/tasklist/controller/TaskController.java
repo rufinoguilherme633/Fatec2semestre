@@ -16,23 +16,19 @@ import br.edu.fateccotia.tasklist.service.TaskService;
 @RestController
 @RequestMapping("/task")
 public class TaskController {
+
 	@Autowired
 	private TaskService taskService;
-	//@GetMapping
-	//public String find() {
-		//return "Hello Word";
-	//}
+
 	@PostMapping
-	public ResponseEntity<Task> create(@RequestBody Task task){
+	public ResponseEntity<Task> create(@RequestBody Task task) {
 		Task save = taskService.save(task);
-		
 		return ResponseEntity.ok(save);
-		
 	}
 	
 	@GetMapping
-	public ResponseEntity<List<Task>> findall(){
-		List<Task> list = taskService.findall();
+	public ResponseEntity<List<Task>> findAll() {
+		List<Task> list = taskService.findAll();
 		return ResponseEntity.ok(list);
 	}
 }

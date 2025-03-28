@@ -7,18 +7,18 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name="users")
-
+@Table(name = "users")
 public class User {
+	//Atributos
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Integer id;
-	
 	private String username;
 	private String password;
 	private String email;
+	
+	//Construtores
 	public User() {
-		// TODO Auto-generated constructor stub
 	}
 	public User(Integer id, String username, String password, String email) {
 		super();
@@ -27,6 +27,8 @@ public class User {
 		this.password = password;
 		this.email = email;
 	}
+
+	//Getters and Setters
 	public Integer getId() {
 		return id;
 	}

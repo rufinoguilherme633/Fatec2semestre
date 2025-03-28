@@ -9,7 +9,7 @@ import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name="task")
+@Table(name = "task")
 public class Task {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
@@ -18,18 +18,19 @@ public class Task {
 	private TaskStatus status = TaskStatus.PENDING;
 	@ManyToOne
 	private User user;
+
+	//Constructors
 	public Task() {
-		// TODO Auto-generated constructor stub
 	}
-	
 	public Task(Integer id, String description, TaskStatus status, User user) {
-		super();
 		this.id = id;
 		this.description = description;
 		this.status = status;
-		this.user =user;
+		this.user = user;
 	}
 
+
+	//Getters and Setters
 	public Integer getId() {
 		return id;
 	}
@@ -49,12 +50,5 @@ public class Task {
 		this.status = status;
 	}
 	
-	public User getUser() {
-		return user;
-	}
-
-	public void setUser(User user) {
-		this.user = user;
-	}
 	
 }
