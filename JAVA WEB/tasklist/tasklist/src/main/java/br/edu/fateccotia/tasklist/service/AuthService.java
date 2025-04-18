@@ -68,4 +68,14 @@ public class AuthService {
 		return true;
 	}
 
+	public void signout(String token) {
+	    Optional<Token> found = tokenRepository.findByToken(token);
+
+	    found.ifPresent(t -> {
+	        t.setExpirationTime(Instant.now().toEpochMilli());
+	        tokenRepository.save(t);
+	    });
+	}
+
+
 }

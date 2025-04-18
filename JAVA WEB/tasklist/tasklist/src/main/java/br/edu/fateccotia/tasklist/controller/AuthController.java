@@ -2,6 +2,7 @@ package br.edu.fateccotia.tasklist.controller;
 
 import java.util.Map;
 
+import org.apache.catalina.connector.Response;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.HttpStatusCode;
@@ -53,5 +54,12 @@ public class AuthController {
 		Boolean isValid = authService.validate(token);
 	    return (isValid) ? ResponseEntity.ok().build() : ResponseEntity.status(HttpStatus.UNAUTHORIZED).build();
 
+	}
+	
+	@PostMapping("/signout")
+	public ResponseEntity<?>signout(@RequestHeader String token){
+		authService.signout(token);
+		
+		return ResponseEntity.status(HttpStatus.UNAUTHORIZED).build();
 	}
 }
